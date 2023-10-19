@@ -19,7 +19,8 @@ namespace LivroDeReceitas.Api.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(RespostaUsuarioRegistradoJson), StatusCodes.Status201Created)]
         public async Task<IActionResult> RegistrarUsuario(
-            [FromServices] IRegistrarUsuarioUseCase useCase, [FromBody] RequestRegistrarUsuarioJson request)
+            [FromServices] IRegistrarUsuarioUseCase useCase, 
+            [FromBody] RequestRegistrarUsuarioJson request)
         {
             var resultado = await useCase.Executar(request);
 
