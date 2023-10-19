@@ -11,7 +11,7 @@ public class Versao00001 : Migration
 
     public override void Up()
     {
-        var tabela = VersaoBase.InserirColunasPadrao(Create.Table("Usuario"));
+        var tabela = VersaoBase.InserirColunasPadrao(Create.Table("Usuarios"));
 
         tabela.WithColumn("Nome").AsString(100).NotNullable()
                .WithColumn("Email").AsString().NotNullable()
