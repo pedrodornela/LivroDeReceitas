@@ -23,13 +23,17 @@ public static class Bootstrapper
 
     private static void AddContexto(IServiceCollection services, IConfiguration configurationManager)
     {
-        var versaoServidor = new MySqlServerVersion(new Version(8, 0, 34));
+        bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
 
-        var connextionString = configurationManager.GetConexaoCompleta();
+        if (!bancoDeDadosMemory) 
+        {
+            var versaoServidor = new MySqlServerVersion(new Version(8, 0, 34));
 
-        services.AddDbContext<LivroDeReceitasContext>(dbContextoOpcoes =>
-        dbContextoOpcoes.UseMySql(connextionString, versaoServidor));
+            var connextionString = configurationManager.GetConexaoCompleta();
 
+            services.AddDbContext<LivroDeReceitasContext>(dbContextoOpcoes =>
+            dbContextoOpcoes.UseMySql(connextionString, versaoServidor));
+        }
     }
 
     private static void AddUnidadeDeTrabalho(IServiceCollection services)
@@ -44,10 +48,14 @@ public static class Bootstrapper
     }
     private static void AddFluentMigrator(IServiceCollection services, IConfiguration configurationManager)
     {
-        services.AddFluentMigratorCore().ConfigureRunner(c =>
-        c.AddMySql5()
-        .WithGlobalConnectionString(configurationManager.GetConexaoCompleta()).ScanIn(Assembly.Load("LivroDeReceitas.Infrastructure")).For.All());
+        bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
 
+        if (!bancoDeDadosMemory)
+        {
+            services.AddFluentMigratorCore().ConfigureRunner(c =>
+                c.AddMySql5()
+                .WithGlobalConnectionString(configurationManager.GetConexaoCompleta()).ScanIn(Assembly.Load("LivroDeReceitas.Infrastructure")).For.All());
+        }
 
     }
 
