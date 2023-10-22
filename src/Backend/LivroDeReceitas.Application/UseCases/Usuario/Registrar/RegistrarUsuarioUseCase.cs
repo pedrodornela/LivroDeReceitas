@@ -19,8 +19,8 @@ public class RegistrarUsuarioUseCase : IRegistrarUsuarioUseCase
     private readonly EncriptadorDeSenha _encriptadorDeSenha;
     private readonly TokenController _tokenController;
 
-    public RegistrarUsuarioUseCase(UsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio, UsuarioWriteOnlyRepositorio repositorio, IMapper mapper, IUnidadeDeTrabalho unidadeDeTrabalho,
-        EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController)
+    public RegistrarUsuarioUseCase(UsuarioWriteOnlyRepositorio repositorio, IMapper mapper, IUnidadeDeTrabalho unidadeDeTrabalho,
+        EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController, UsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio)
     {
         _repositorio = repositorio;
         _mapper = mapper;
