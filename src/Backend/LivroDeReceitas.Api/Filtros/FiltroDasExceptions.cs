@@ -19,7 +19,7 @@ public class FiltroDasExceptions : IExceptionFilter
         }
         else
         {
-
+            TratarLoginException(context);
         }
 
     }
