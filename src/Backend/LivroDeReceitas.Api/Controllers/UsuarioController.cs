@@ -11,9 +11,7 @@ using System.Threading.Tasks;
 
 namespace LivroDeReceitas.Api.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class UsuarioController : ControllerBase
+    public class UsuarioController : LivroDeReceitasController
     { 
 
         [HttpPost]
