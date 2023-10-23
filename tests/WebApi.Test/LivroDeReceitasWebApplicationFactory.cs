@@ -8,7 +8,9 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 namespace WebApi.Test;
 
 public class LivroDeReceitasWebApplicationFactory<TStartup> : WebApplicationFactory<TStartup> where TStartup : class
-{ 
+{
+    private LivroDeReceitas.Domain.Entidades.Usuario _usuario;
+    private string _senha;
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
         builder.UseEnvironment("Test")
@@ -34,7 +36,20 @@ public class LivroDeReceitasWebApplicationFactory<TStartup> : WebApplicationFact
                 var database = scopeService.GetRequiredService<LivroDeReceitasContext>();
 
                 database.Database.EnsureDeleted();
+
+               (_usuario, _senha) = ContextSeedInMemory.Seed(database);
             });
     }
+
+    public LivroDeReceitas.Domain.Entidades.Usuario RecuperarUsuario()
+    {
+        return _usuario;
+    }
+
+    public string RecuperarSenha()
+    {
+        return _senha;
+    }
+
 
 }
