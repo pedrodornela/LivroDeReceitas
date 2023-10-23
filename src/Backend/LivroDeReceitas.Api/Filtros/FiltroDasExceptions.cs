@@ -13,7 +13,7 @@ public class FiltroDasExceptions : IExceptionFilter
 {
     public void OnException(ExceptionContext context)
     {
-        if(context.Exception is LivroDeReceitasExceptions) 
+        if(context.Exception is ErrosDeValidacaoException) 
         {
             TratarLivroDeReceitasException(context);
         }

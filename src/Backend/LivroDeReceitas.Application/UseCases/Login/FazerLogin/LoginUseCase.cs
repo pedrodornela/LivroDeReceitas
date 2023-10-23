@@ -24,7 +24,7 @@ public class LoginUseCase : ILoginUseCase
     {
         var senhaCriptografada = _encriptadorDeSenha.Criptografar(request.Senha);
 
-        var usuario = await _usuarioReadOnlyRepositorio.RecuperarPorEmailSenha(request.Email, request.Senha);
+        var usuario = await _usuarioReadOnlyRepositorio.RecuperarPorEmailSenha(request.Email, senhaCriptografada);
 
         if(usuario == null)
         {
