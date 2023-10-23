@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio;
 
-public class UsuarioRepositorio : UsuarioReadOnlyRepositorio, UsuarioWriteOnlyRepositorio
+public class UsuarioRepositorio : IUsuarioReadOnlyRepositorio, IUsuarioWriteOnlyRepositorio, IUpdateOnlyRepositorio
 {
     private readonly LivroDeReceitasContext _context
 ;
@@ -28,4 +28,11 @@ public class UsuarioRepositorio : UsuarioReadOnlyRepositorio, UsuarioWriteOnlyRe
         return await _context.Usuarios.AsNoTracking() 
             .FirstOrDefaultAsync(c => c.Email.Equals(email) && c.Senha.Equals(senha));
     }
+
+    public void Update(Usuario usuario)
+    {
+       _context.Usuarios.Update(usuario);
+    }
+
+
 }

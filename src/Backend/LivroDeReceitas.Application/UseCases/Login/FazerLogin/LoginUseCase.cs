@@ -9,11 +9,11 @@ namespace LivroDeReceitas.Application.UseCases.Login.FazerLogin;
 
 public class LoginUseCase : ILoginUseCase
 {
-    private readonly UsuarioReadOnlyRepositorio _usuarioReadOnlyRepositorio;
+    private readonly IUsuarioReadOnlyRepositorio _usuarioReadOnlyRepositorio;
     private readonly EncriptadorDeSenha _encriptadorDeSenha;
     private readonly TokenController _tokenController;
 
-    public LoginUseCase(UsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio, EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController)
+    public LoginUseCase(IUsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio, EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController)
     {
         _usuarioReadOnlyRepositorio = usuarioReadOnlyRepositorio;
         _encriptadorDeSenha = encriptadorDeSenha;

@@ -6,13 +6,13 @@ namespace UtilitarioParaOsTests.Repositorios;
 public class UsuarioWriteOnlyRepositorioBuilder
 {
     private static UsuarioWriteOnlyRepositorioBuilder _instance;
-    private readonly Mock<UsuarioWriteOnlyRepositorio> _repositorio;
+    private readonly Mock<IUsuarioWriteOnlyRepositorio> _repositorio;
 
     private UsuarioWriteOnlyRepositorioBuilder()
     {
         if (_repositorio == null)
         {
-            _repositorio = new Mock<UsuarioWriteOnlyRepositorio>(); 
+            _repositorio = new Mock<IUsuarioWriteOnlyRepositorio>(); 
         }
 
     }
@@ -22,7 +22,7 @@ public class UsuarioWriteOnlyRepositorioBuilder
         return _instance;
     }
 
-    public UsuarioWriteOnlyRepositorio Construir()
+    public IUsuarioWriteOnlyRepositorio Construir()
     {
         return _repositorio.Object;
     }
