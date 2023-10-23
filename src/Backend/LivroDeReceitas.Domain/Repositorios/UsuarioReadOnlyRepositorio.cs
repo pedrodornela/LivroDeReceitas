@@ -3,5 +3,5 @@
 public interface UsuarioReadOnlyRepositorio
 {
     Task<bool> ExisteUsuarioComEmail(string email);
-    Task<Entidades.Usuario> Login(string email, string senha);
+    Task<Entidades.Usuario> RecuperarPorEmailSenha(string email, string senha);
 }
