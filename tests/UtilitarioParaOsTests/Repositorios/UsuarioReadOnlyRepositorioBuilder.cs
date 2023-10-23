@@ -7,13 +7,13 @@ namespace UtilitarioParaOsTests.Repositorios;
 public class UsuarioReadOnlyRepositorioBuilder
 {
     private static UsuarioReadOnlyRepositorioBuilder _instance;
-    private readonly Mock<UsuarioReadOnlyRepositorio> _repositorio;
+    private readonly Mock<IUsuarioReadOnlyRepositorio> _repositorio;
 
     private UsuarioReadOnlyRepositorioBuilder()
     {
         if (_repositorio == null)
         {
-            _repositorio = new Mock<UsuarioReadOnlyRepositorio>();
+            _repositorio = new Mock<IUsuarioReadOnlyRepositorio>();
         }
 
     }
@@ -38,7 +38,7 @@ public class UsuarioReadOnlyRepositorioBuilder
         return this;
     }
 
-    public UsuarioReadOnlyRepositorio Construir()
+    public IUsuarioReadOnlyRepositorio Construir()
     {
         return _repositorio.Object;
     }

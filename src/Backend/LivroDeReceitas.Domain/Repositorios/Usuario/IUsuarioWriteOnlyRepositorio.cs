@@ -2,7 +2,7 @@
 
 namespace LivroDeReceitas.Domain.Repositorios;
 
-public interface UsuarioWriteOnlyRepositorio
+public interface IUsuarioWriteOnlyRepositorio
 {
     Task Adicionar(Usuario usuario);
 }
