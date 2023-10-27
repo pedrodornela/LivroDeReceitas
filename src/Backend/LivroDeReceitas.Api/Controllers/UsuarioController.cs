@@ -1,3 +1,5 @@
+using LivroDeReceitas.Api.Filtros;
+using LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha;
 using LivroDeReceitas.Application.UseCases.Usuario.Registrar;
 using LivroDeReceitas.Comunicacao.Request;
 using LivroDeReceitas.Comunicacao.Response;
@@ -24,5 +26,20 @@ namespace LivroDeReceitas.Api.Controllers
 
             return Created(string.Empty, resultado);
         }
+
+        [HttpPut]
+        [Route("alterar-senha")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ServiceFilter(typeof(UsuarioAutenticadoAttribute))]
+        public async Task<IActionResult> AlterarSenha(
+            [FromServices] IAlterarSenhaUseCase useCase,
+            [FromBody] RequisicaoAlterarSenhaJson request)
+        {
+            await useCase.Executar(request);
+
+            return NoContent();
+        }
+
+
     }
 }
