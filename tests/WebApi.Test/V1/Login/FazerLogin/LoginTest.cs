@@ -9,7 +9,7 @@ namespace WebApi.Test.V1.Login.FazerLogin;
 
 public class LoginTest : ControllerBase
 {
-    private const string METODO = "login"
+    private const string METODO = "login";
 
     private LivroDeReceitas.Domain.Entidades.Usuario _usuario;
     private string _senha;
