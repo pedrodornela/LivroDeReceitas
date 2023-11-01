@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Moq" Version="4.20.69" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Backend\LivroDeReceitas.Application\LivroDeReceitas.Application.csproj" />
+    <ProjectReference Include="..\..\src\Backend\LivroDeReceitas.Domain\LivroDeReceitas.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Shared\LivroDeReceitas.Comunicacao\LivroDeReceitas.Comunicacao.csproj" />
+  </ItemGroup>
+
+</Project>

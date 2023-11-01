@@ -12,15 +12,15 @@ namespace LivroDeReceitas.Application.UseCases.Usuario.Registrar;
 
 public class RegistrarUsuarioUseCase : IRegistrarUsuarioUseCase
 {
-    private readonly UsuarioReadOnlyRepositorio _usuarioReadOnlyRepositorio;
-    private readonly UsuarioWriteOnlyRepositorio _repositorio;
+    private readonly IUsuarioReadOnlyRepositorio _usuarioReadOnlyRepositorio;
+    private readonly IUsuarioWriteOnlyRepositorio _repositorio;
     private readonly IMapper _mapper;
     private readonly IUnidadeDeTrabalho _unidadeDeTrabalho;
     private readonly EncriptadorDeSenha _encriptadorDeSenha;
     private readonly TokenController _tokenController;
 
-    public RegistrarUsuarioUseCase(UsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio, UsuarioWriteOnlyRepositorio repositorio, IMapper mapper, IUnidadeDeTrabalho unidadeDeTrabalho,
-        EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController)
+    public RegistrarUsuarioUseCase(IUsuarioWriteOnlyRepositorio repositorio, IMapper mapper, IUnidadeDeTrabalho unidadeDeTrabalho,
+        EncriptadorDeSenha encriptadorDeSenha, TokenController tokenController, IUsuarioReadOnlyRepositorio usuarioReadOnlyRepositorio)
     {
         _repositorio = repositorio;
         _mapper = mapper;
@@ -30,7 +30,7 @@ public class RegistrarUsuarioUseCase : IRegistrarUsuarioUseCase
         _usuarioReadOnlyRepositorio = usuarioReadOnlyRepositorio;
     }
 
-    public RegistrarUsuarioUseCase(UsuarioWriteOnlyRepositorio repositorio) 
+    public RegistrarUsuarioUseCase(IUsuarioWriteOnlyRepositorio repositorio) 
     {
         _repositorio = repositorio;
     }
