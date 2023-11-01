@@ -38,7 +38,6 @@ public class RegistrarUsuarioUseCaseTest
 
         await acao.Should().ThrowAsync<ErrosDeValidacaoException>()
             .Where(exception => exception.MensagensDeErro.Count == 1 && exception.MensagensDeErro.Contains(ResourceMensagensDeErro.EMAIL_JA_CADASTRADO));
-
     }
 
     [Fact]
@@ -53,7 +52,6 @@ public class RegistrarUsuarioUseCaseTest
 
         await acao.Should().ThrowAsync<ErrosDeValidacaoException>()
             .Where(exception => exception.MensagensDeErro.Count == 1 && exception.MensagensDeErro.Contains(ResourceMensagensDeErro.EMAIL_USUARIO_EM_BRANCO));
-
     }
 
     private RegistrarUsuarioUseCase CriarUseCase(string email = "")
