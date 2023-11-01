@@ -6,5 +6,4 @@ public interface IUsuarioReadOnlyRepositorio
     Task<Entidades.Usuario> RecuperarPorEmailSenha(string email, string senha);
     Task<Entidades.Usuario> RecuperarPorEmail(string email);
 
-
 }
