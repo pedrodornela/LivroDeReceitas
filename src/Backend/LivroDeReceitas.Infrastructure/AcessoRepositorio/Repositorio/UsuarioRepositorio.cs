@@ -45,5 +45,4 @@ public class UsuarioRepositorio : IUsuarioReadOnlyRepositorio, IUsuarioWriteOnly
        _context.Usuarios.Update(usuario);
     }
 
-
 }
