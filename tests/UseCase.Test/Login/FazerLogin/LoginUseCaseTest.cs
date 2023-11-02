@@ -27,7 +27,6 @@ public class LoginUseCaseTest
         resposta.Should().NotBeNull();
         resposta.Nome.Should().Be(usuario.Nome);
         resposta.Token.Should().NotBeNullOrWhiteSpace();
-
     }
 
     [Fact]
@@ -98,5 +97,4 @@ public class LoginUseCaseTest
 
         return new LoginUseCase(repositorioReadOnly, encriptador, token);
     }
-
 }

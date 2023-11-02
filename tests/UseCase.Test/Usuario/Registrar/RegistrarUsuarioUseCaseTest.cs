@@ -24,7 +24,6 @@ public class RegistrarUsuarioUseCaseTest
 
         resposta.Should().NotBeNull();
         resposta.Token.Should().NotBeNullOrWhiteSpace();
-
     }
 
     [Fact]

@@ -30,7 +30,6 @@ public class AlterarSenhaUseCaseTest
         };
 
         await acao.Should().NotThrowAsync();
-
     }
 
     [Fact]
@@ -51,7 +50,6 @@ public class AlterarSenhaUseCaseTest
 
         await acao.Should().ThrowAsync<ErrosDeValidacaoException>()
             .Where(ex => ex.MensagensDeErro.Count == 1 && ex.MensagensDeErro.Contains(ResourceMensagensDeErro.SENHA_USUARIO_EM_BRANCO));
-
     }
 
 
@@ -77,7 +75,6 @@ public class AlterarSenhaUseCaseTest
 
         await acao.Should().ThrowAsync<ErrosDeValidacaoException>()
             .Where(ex => ex.MensagensDeErro.Count == 1 && ex.MensagensDeErro.Contains(ResourceMensagensDeErro.SENHA_USUARIO_MINIMO_SEIS_CARACTERES));
-
     }
 
 
