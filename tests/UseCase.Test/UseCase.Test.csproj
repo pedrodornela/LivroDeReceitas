@@ -7,7 +7,7 @@
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
-	<SonarQubeTestProject>false</SonarQubeTestProject>
+	<SonarQubeExclude>false</SonarQubeExclude>
   </PropertyGroup>
 
   <ItemGroup>
