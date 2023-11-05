@@ -44,5 +44,5 @@ jobs:
         shell: pwsh
         run: |
           .\.sonar\scanner\dotnet-sonarscanner begin /k:"pedrodornela_LivroDeReceitas" /o:"pedrodornela" /d:sonar.token="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="https://sonarcloud.io"
-          dotnet build --configuration Release /p:CollectCoverage=true /p:CoverletOutputFormat=opencover -l trx
+          dotnet build --configuration Release
           .\.sonar\scanner\dotnet-sonarscanner end /d:sonar.token="${{ secrets.SONAR_TOKEN }}"
