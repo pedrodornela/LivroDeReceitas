@@ -1,0 +1,1362 @@
+{
+  "LivroDeReceitas.Application.dll": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\Bootstrapper.cs": {
+      "LivroDeReceitas.Application.Bootstrapper": {
+        "System.Void LivroDeReceitas.Application.Bootstrapper::AddApplication(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "15": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0,
+            "20": 0,
+            "23": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.Bootstrapper::AdicionarUsuarioLogado(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.Bootstrapper::AdicionarChaveAdicionaSenha(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.Bootstrapper::AdicionarTokenJWT(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "41": 0,
+            "42": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.Bootstrapper::AdicionarUseCase(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Usuario\\SenhaValidator.cs": {
+      "LivroDeReceitas.Application.UseCases.Usuario.SenhaValidator": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.SenhaValidator::<.ctor>b__0_2()": {
+          "Lines": {
+            "14": 10,
+            "15": 10,
+            "16": 20
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.SenhaValidator::.ctor()": {
+          "Lines": {
+            "9": 10,
+            "10": 10,
+            "11": 10,
+            "13": 20,
+            "17": 10
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Usuario\\Registrar\\RegistrarUsuarioUseCase.cs": {
+      "LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase::.ctor(LivroDeReceitas.Domain.Repositorios.IUsuarioWriteOnlyRepositorio,AutoMapper.IMapper,LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio.IUnidadeDeTrabalho,LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha,LivroDeReceitas.Application.Servicos.Token.TokenController,LivroDeReceitas.Domain.Repositorios.IUsuarioReadOnlyRepositorio)": {
+          "Lines": {
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 3,
+            "28": 3,
+            "29": 3,
+            "30": 3,
+            "31": 3
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase::.ctor(LivroDeReceitas.Domain.Repositorios.IUsuarioWriteOnlyRepositorio)": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<>c": {
+        "System.String LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<>c::<Validar>b__9_0(FluentValidation.Results.ValidationFailure)": {
+          "Lines": {
+            "71": 4
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<Executar>d__8": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<Executar>d__8::MoveNext()": {
+          "Lines": {
+            "39": 3,
+            "40": 3,
+            "42": 1,
+            "43": 1,
+            "45": 1,
+            "47": 1,
+            "49": 1,
+            "51": 1,
+            "52": 1,
+            "53": 1,
+            "54": 1,
+            "55": 1
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<Validar>d__9": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioUseCase/<Validar>d__9::MoveNext()": {
+          "Lines": {
+            "58": 3,
+            "59": 3,
+            "60": 3,
+            "62": 3,
+            "63": 3,
+            "64": 1,
+            "65": 1,
+            "66": 1,
+            "69": 3,
+            "70": 2,
+            "72": 2,
+            "75": 1
+          },
+          "Branches": [
+            {
+              "Line": 63,
+              "Offset": 191,
+              "EndOffset": 193,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 63,
+              "Offset": 191,
+              "EndOffset": 227,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            },
+            {
+              "Line": 69,
+              "Offset": 245,
+              "EndOffset": 247,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 2
+            },
+            {
+              "Line": 69,
+              "Offset": 245,
+              "EndOffset": 318,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Usuario\\Registrar\\RegistrarUsuarioValidator.cs": {
+      "LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioValidator": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioValidator::<.ctor>b__0_5()": {
+          "Lines": {
+            "17": 3,
+            "18": 3,
+            "19": 6
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioValidator::<.ctor>b__0_7()": {
+          "Lines": {
+            "21": 3,
+            "22": 3,
+            "23": 3,
+            "24": 3,
+            "25": 3,
+            "26": 3,
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 6,
+            "31": 6
+          },
+          "Branches": [
+            {
+              "Line": 26,
+              "Offset": 21,
+              "EndOffset": 23,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 26,
+              "Offset": 21,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.Registrar.RegistrarUsuarioValidator::.ctor()": {
+          "Lines": {
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 6,
+            "20": 6,
+            "35": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Usuario\\AlterarSenha\\AlterarSenhaUseCase.cs": {
+      "LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaUseCase": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaUseCase::Validar(LivroDeReceitas.Comunicacao.Request.RequisicaoAlterarSenhaJson,LivroDeReceitas.Domain.Entidades.Usuario)": {
+          "Lines": {
+            "42": 7,
+            "43": 7,
+            "44": 7,
+            "46": 7,
+            "48": 7,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 7,
+            "54": 6,
+            "55": 12,
+            "56": 6,
+            "59": 1
+          },
+          "Branches": [
+            {
+              "Line": 48,
+              "Offset": 50,
+              "EndOffset": 52,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 48,
+              "Offset": 50,
+              "EndOffset": 81,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            },
+            {
+              "Line": 53,
+              "Offset": 94,
+              "EndOffset": 96,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 6
+            },
+            {
+              "Line": 53,
+              "Offset": 94,
+              "EndOffset": 154,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 1
+            }
+          ]
+        },
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaUseCase::.ctor(LivroDeReceitas.Domain.Repositorios.IUsuarioUpdateOnlyRepositorio,LivroDeReceitas.Application.Servicos.UsuarioLogado.IUsuarioLogado,LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha,LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio.IUnidadeDeTrabalho)": {
+          "Lines": {
+            "18": 7,
+            "19": 7,
+            "20": 7,
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaUseCase/<Executar>d__5": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaUseCase/<Executar>d__5::MoveNext()": {
+          "Lines": {
+            "27": 7,
+            "28": 7,
+            "30": 7,
+            "32": 7,
+            "34": 1,
+            "36": 1,
+            "38": 1,
+            "39": 1
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Usuario\\AlterarSenha\\AlterarSenhaValidator.cs": {
+      "LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaValidator": {
+        "System.Void LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha.AlterarSenhaValidator::.ctor()": {
+          "Lines": {
+            "10": 7,
+            "11": 7,
+            "12": 7,
+            "13": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\UseCases\\Login\\FazerLogin\\LoginUseCase.cs": {
+      "LivroDeReceitas.Application.UseCases.Login.FazerLogin.LoginUseCase": {
+        "System.Void LivroDeReceitas.Application.UseCases.Login.FazerLogin.LoginUseCase::.ctor(LivroDeReceitas.Domain.Repositorios.IUsuarioReadOnlyRepositorio,LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha,LivroDeReceitas.Application.Servicos.Token.TokenController)": {
+          "Lines": {
+            "16": 4,
+            "17": 4,
+            "18": 4,
+            "19": 4,
+            "20": 4,
+            "21": 4
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.UseCases.Login.FazerLogin.LoginUseCase/<Executar>d__4": {
+        "System.Void LivroDeReceitas.Application.UseCases.Login.FazerLogin.LoginUseCase/<Executar>d__4::MoveNext()": {
+          "Lines": {
+            "24": 4,
+            "25": 4,
+            "27": 4,
+            "29": 4,
+            "30": 3,
+            "31": 3,
+            "34": 1,
+            "35": 1,
+            "36": 1,
+            "37": 1,
+            "38": 1,
+            "40": 1
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 208,
+              "EndOffset": 210,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 29,
+              "Offset": 208,
+              "EndOffset": 217,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\Servicos\\UsuarioLogado\\UsuarioLogado.cs": {
+      "LivroDeReceitas.Application.Servicos.UsuarioLogado.UsuarioLogado": {
+        "System.Void LivroDeReceitas.Application.Servicos.UsuarioLogado.UsuarioLogado::.ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,LivroDeReceitas.Application.Servicos.Token.TokenController,LivroDeReceitas.Domain.Repositorios.IUsuarioReadOnlyRepositorio)": {
+          "Lines": {
+            "13": 0,
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "LivroDeReceitas.Application.Servicos.UsuarioLogado.UsuarioLogado/<RecuperarUsuario>d__4": {
+        "System.Void LivroDeReceitas.Application.Servicos.UsuarioLogado.UsuarioLogado/<RecuperarUsuario>d__4::MoveNext()": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "26": 0,
+            "28": 0,
+            "30": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\Servicos\\Token\\TokenController.cs": {
+      "LivroDeReceitas.Application.Servicos.Token.TokenController": {
+        "System.String LivroDeReceitas.Application.Servicos.Token.TokenController::GerarToken(System.String)": {
+          "Lines": {
+            "20": 2,
+            "21": 2,
+            "22": 2,
+            "23": 2,
+            "24": 2,
+            "26": 2,
+            "28": 2,
+            "29": 2,
+            "30": 2,
+            "31": 2,
+            "32": 2,
+            "33": 2,
+            "34": 2,
+            "36": 2,
+            "38": 2
+          },
+          "Branches": []
+        },
+        "System.Security.Claims.ClaimsPrincipal LivroDeReceitas.Application.Servicos.Token.TokenController::ValidarToken(System.String)": {
+          "Lines": {
+            "41": 0,
+            "42": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "53": 0,
+            "55": 0,
+            "56": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Application.Servicos.Token.TokenController::RecuperarEmail(System.String)": {
+          "Lines": {
+            "59": 0,
+            "60": 0,
+            "62": 0,
+            "63": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.IdentityModel.Tokens.SymmetricSecurityKey LivroDeReceitas.Application.Servicos.Token.TokenController::SimetricKey()": {
+          "Lines": {
+            "67": 2,
+            "68": 2,
+            "69": 2,
+            "70": 2
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Application.Servicos.Token.TokenController::.ctor(System.Double,System.String)": {
+          "Lines": {
+            "13": 7,
+            "14": 7,
+            "15": 7,
+            "16": 7,
+            "17": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\Servicos\\Criptografia\\EncriptadorDeSenha.cs": {
+      "LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha": {
+        "System.String LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha::Criptografar(System.String)": {
+          "Lines": {
+            "16": 24,
+            "17": 24,
+            "19": 24,
+            "20": 24,
+            "21": 24,
+            "22": 24,
+            "23": 24
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha::StringBytes(System.Byte[])": {
+          "Lines": {
+            "26": 24,
+            "27": 24,
+            "28": 3144,
+            "29": 1536,
+            "30": 1536,
+            "31": 1536,
+            "32": 1536,
+            "33": 24,
+            "34": 24
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 51,
+              "EndOffset": 14,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 1536
+            },
+            {
+              "Line": 28,
+              "Offset": 51,
+              "EndOffset": 53,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 24
+            }
+          ]
+        },
+        "System.Void LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha::.ctor(System.String)": {
+          "Lines": {
+            "10": 25,
+            "11": 25,
+            "12": 25,
+            "13": 25
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Application\\Servicos\\Automapper\\AutoMapperConfiguracao.cs": {
+      "LivroDeReceitas.Application.Servicos.Automapper.AutoMapperConfiguracao": {
+        "System.Void LivroDeReceitas.Application.Servicos.Automapper.AutoMapperConfiguracao::.ctor()": {
+          "Lines": {
+            "8": 3,
+            "9": 3,
+            "10": 3,
+            "11": 6,
+            "13": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "LivroDeReceitas.Comunicacao.dll": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Response\\RespostaErroJson.cs": {
+      "LivroDeReceitas.Comunicacao.Response.RespostaErroJson": {
+        "System.Collections.Generic.List`1<System.String> LivroDeReceitas.Comunicacao.Response.RespostaErroJson::get_Mensagens()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Comunicacao.Response.RespostaErroJson::.ctor(System.String)": {
+          "Lines": {
+            "7": 0,
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "14": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Comunicacao.Response.RespostaErroJson::.ctor(System.Collections.Generic.List`1<System.String>)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0,
+            "19": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Response\\RespostaLoginJson.cs": {
+      "LivroDeReceitas.Comunicacao.Response.RespostaLoginJson": {
+        "System.String LivroDeReceitas.Comunicacao.Response.RespostaLoginJson::get_Nome()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Response.RespostaLoginJson::get_Token()": {
+          "Lines": {
+            "6": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Response\\RespostaUsuarioRegistradoJson.cs": {
+      "LivroDeReceitas.Comunicacao.Response.RespostaUsuarioRegistradoJson": {
+        "System.String LivroDeReceitas.Comunicacao.Response.RespostaUsuarioRegistradoJson::get_Token()": {
+          "Lines": {
+            "5": 2
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Request\\RequestRegistrarUsuarioJson.cs": {
+      "LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson": {
+        "System.String LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson::get_Nome()": {
+          "Lines": {
+            "5": 7
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson::get_Email()": {
+          "Lines": {
+            "6": 17
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson::get_Senha()": {
+          "Lines": {
+            "7": 7
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson::get_Telefone()": {
+          "Lines": {
+            "8": 13
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Request\\RequisicaoAlterarSenhaJson.cs": {
+      "LivroDeReceitas.Comunicacao.Request.RequisicaoAlterarSenhaJson": {
+        "System.String LivroDeReceitas.Comunicacao.Request.RequisicaoAlterarSenhaJson::get_SenhaAtual()": {
+          "Lines": {
+            "5": 20
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Request.RequisicaoAlterarSenhaJson::get_NovaSenha()": {
+          "Lines": {
+            "6": 15
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Comunicacao\\Request\\RequisicaoLoginJson.cs": {
+      "LivroDeReceitas.Comunicacao.Request.RequisicaoLoginJson": {
+        "System.String LivroDeReceitas.Comunicacao.Request.RequisicaoLoginJson::get_Email()": {
+          "Lines": {
+            "5": 8
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Comunicacao.Request.RequisicaoLoginJson::get_Senha()": {
+          "Lines": {
+            "6": 8
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "LivroDeReceitas.Domain.dll": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Domain\\Extension\\RepositorioExtension.cs": {
+      "LivroDeReceitas.Domain.Extension.RepositorioExtension": {
+        "System.String LivroDeReceitas.Domain.Extension.RepositorioExtension::GetConexaoDatabase(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "8": 0,
+            "9": 0,
+            "10": 0,
+            "11": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Domain.Extension.RepositorioExtension::GetNomeDatabase(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "14": 0,
+            "15": 0,
+            "16": 0,
+            "17": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Domain.Extension.RepositorioExtension::GetConexaoCompleta(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "25": 0,
+            "27": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Domain\\Entidades\\EntidadeBase.cs": {
+      "LivroDeReceitas.Domain.Entidades.EntidadeBase": {
+        "System.Int64 LivroDeReceitas.Domain.Entidades.EntidadeBase::get_Id()": {
+          "Lines": {
+            "5": 32
+          },
+          "Branches": []
+        },
+        "System.DateTime LivroDeReceitas.Domain.Entidades.EntidadeBase::get_DataCriacao()": {
+          "Lines": {
+            "6": 12
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Backend\\LivroDeReceitas.Domain\\Entidades\\Usuario.cs": {
+      "LivroDeReceitas.Domain.Entidades.Usuario": {
+        "System.String LivroDeReceitas.Domain.Entidades.Usuario::get_Nome()": {
+          "Lines": {
+            "5": 14
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Domain.Entidades.Usuario::get_Email()": {
+          "Lines": {
+            "6": 24
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Domain.Entidades.Usuario::get_Senha()": {
+          "Lines": {
+            "7": 28
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Domain.Entidades.Usuario::get_Telefone()": {
+          "Lines": {
+            "8": 12
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "LivroDeReceitas.Exceptions.dll": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Exceptions\\ResourceMensagensDeErro.Designer.cs": {
+      "LivroDeReceitas.Exceptions.ResourceMensagensDeErro": {
+        "System.Resources.ResourceManager LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_ResourceManager()": {
+          "Lines": {
+            "40": 47,
+            "41": 48,
+            "42": 1,
+            "43": 1,
+            "44": 1,
+            "45": 47,
+            "46": 47
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 41,
+              "Offset": 11,
+              "EndOffset": 47,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 47
+            }
+          ]
+        },
+        "System.Globalization.CultureInfo LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_Culture()": {
+          "Lines": {
+            "55": 0,
+            "56": 0,
+            "57": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Exceptions.ResourceMensagensDeErro::set_Culture(System.Globalization.CultureInfo)": {
+          "Lines": {
+            "58": 0,
+            "59": 0,
+            "60": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_EMAIL_JA_CADASTRADO()": {
+          "Lines": {
+            "67": 2,
+            "68": 2,
+            "69": 2
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_EMAIL_USUARIO_EM_BRANCO()": {
+          "Lines": {
+            "76": 4,
+            "77": 4,
+            "78": 4
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_EMAIL_USUARIO_INVALIDO()": {
+          "Lines": {
+            "85": 3,
+            "86": 3,
+            "87": 3
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_ERRO_DESCONHECIDO()": {
+          "Lines": {
+            "94": 0,
+            "95": 0,
+            "96": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_LOGIN_INVALIDO()": {
+          "Lines": {
+            "103": 6,
+            "104": 6,
+            "105": 6
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_NOME_USUARIO_EM_BRANCO()": {
+          "Lines": {
+            "112": 3,
+            "113": 3,
+            "114": 3
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_SENHA_ATUAL_INVALIDA()": {
+          "Lines": {
+            "121": 0,
+            "122": 0,
+            "123": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_SENHA_USUARIO_EM_BRANCO()": {
+          "Lines": {
+            "130": 11,
+            "131": 11,
+            "132": 11
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_SENHA_USUARIO_MINIMO_SEIS_CARACTERES()": {
+          "Lines": {
+            "139": 15,
+            "140": 15,
+            "141": 15
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_TELEFONE_USUARIO_EM_BRANCO()": {
+          "Lines": {
+            "148": 3,
+            "149": 3,
+            "150": 3
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_TELEFONE_USUARIO_INVALIDO()": {
+          "Lines": {
+            "157": 0,
+            "158": 0,
+            "159": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_TOKEN_EXPIRADO()": {
+          "Lines": {
+            "166": 0,
+            "167": 0,
+            "168": 0
+          },
+          "Branches": []
+        },
+        "System.String LivroDeReceitas.Exceptions.ResourceMensagensDeErro::get_USUARIO_SEM_PERMISSAO()": {
+          "Lines": {
+            "175": 0,
+            "176": 0,
+            "177": 0
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Exceptions.ResourceMensagensDeErro::.ctor()": {
+          "Lines": {
+            "32": 0,
+            "33": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Exceptions\\ExceptionsBase\\ErrosDeValidacaoException.cs": {
+      "LivroDeReceitas.Exceptions.ExceptionsBase.ErrosDeValidacaoException": {
+        "System.Collections.Generic.List`1<System.String> LivroDeReceitas.Exceptions.ExceptionsBase.ErrosDeValidacaoException::get_MensagensDeErro()": {
+          "Lines": {
+            "5": 24
+          },
+          "Branches": []
+        },
+        "System.Void LivroDeReceitas.Exceptions.ExceptionsBase.ErrosDeValidacaoException::.ctor(System.Collections.Generic.List`1<System.String>)": {
+          "Lines": {
+            "7": 8,
+            "8": 8,
+            "9": 8,
+            "10": 8
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Exceptions\\ExceptionsBase\\LivroDeReceitasException.cs": {
+      "LivroDeReceitas.Exceptions.ExceptionsBase.LivroDeReceitasException": {
+        "System.Void LivroDeReceitas.Exceptions.ExceptionsBase.LivroDeReceitasException::.ctor(System.String)": {
+          "Lines": {
+            "5": 11,
+            "6": 11,
+            "8": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\src\\Shared\\LivroDeReceitas.Exceptions\\ExceptionsBase\\LoginInvalidoException.cs": {
+      "LivroDeReceitas.Exceptions.ExceptionsBase.LoginInvalidoException": {
+        "System.Void LivroDeReceitas.Exceptions.ExceptionsBase.LoginInvalidoException::.ctor()": {
+          "Lines": {
+            "5": 3,
+            "6": 3,
+            "8": 3
+          },
+          "Branches": []
+        }
+      }
+    }
+  },
+  "UtilitarioParaOsTests.dll": {
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\UsuarioLogado\\UsuarioLogadoBuilder.cs": {
+      "UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder": {
+        "UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder::Instancia()": {
+          "Lines": {
+            "22": 7,
+            "23": 7,
+            "24": 7,
+            "25": 7
+          },
+          "Branches": []
+        },
+        "UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder::RecuperarUsuario(LivroDeReceitas.Domain.Entidades.Usuario)": {
+          "Lines": {
+            "28": 7,
+            "29": 7,
+            "31": 7,
+            "32": 7
+          },
+          "Branches": []
+        },
+        "LivroDeReceitas.Application.Servicos.UsuarioLogado.IUsuarioLogado UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder::Construir()": {
+          "Lines": {
+            "34": 7,
+            "35": 7,
+            "36": 7
+          },
+          "Branches": []
+        },
+        "System.Void UtilitarioParaOsTests.UsuarioLogado.UsuarioLogadoBuilder::.ctor()": {
+          "Lines": {
+            "13": 7,
+            "14": 7,
+            "15": 7,
+            "16": 7,
+            "17": 7,
+            "18": 7,
+            "20": 7
+          },
+          "Branches": [
+            {
+              "Line": 15,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            },
+            {
+              "Line": 15,
+              "Offset": 19,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Token\\TokenControllerBuilder.cs": {
+      "UtilitarioParaOsTests.Token.TokenControllerBuilder": {
+        "LivroDeReceitas.Application.Servicos.Token.TokenController UtilitarioParaOsTests.Token.TokenControllerBuilder::Instancia()": {
+          "Lines": {
+            "8": 7,
+            "9": 7,
+            "10": 7
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Requisicoes\\RequisicaoAlterarSenhaUsuarioBuilder.cs": {
+      "UtilitarioParaOsTests.Requisicoes.RequisicaoAlterarSenhaUsuarioBuilder": {
+        "LivroDeReceitas.Comunicacao.Request.RequisicaoAlterarSenhaJson UtilitarioParaOsTests.Requisicoes.RequisicaoAlterarSenhaUsuarioBuilder::Construir(System.Int32)": {
+          "Lines": {
+            "9": 6,
+            "10": 6,
+            "11": 6,
+            "12": 12,
+            "13": 6
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Requisicoes\\RequisicaoRegistrarUsuarioBuilder.cs": {
+      "UtilitarioParaOsTests.Requisicoes.RequisicaoRegistrarUsuarioBuilder": {
+        "LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson UtilitarioParaOsTests.Requisicoes.RequisicaoRegistrarUsuarioBuilder::Construir(System.Int32)": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 6,
+            "16": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Repositorios\\UnidadeDeTrabalhoBuilder.cs": {
+      "UtilitarioParaOsTests.Repositorios.UnidadeDeTrabalhoBuilder": {
+        "UtilitarioParaOsTests.Repositorios.UnidadeDeTrabalhoBuilder UtilitarioParaOsTests.Repositorios.UnidadeDeTrabalhoBuilder::Instancia()": {
+          "Lines": {
+            "21": 10,
+            "22": 10,
+            "23": 10,
+            "24": 10
+          },
+          "Branches": []
+        },
+        "LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio.IUnidadeDeTrabalho UtilitarioParaOsTests.Repositorios.UnidadeDeTrabalhoBuilder::Construir()": {
+          "Lines": {
+            "27": 10,
+            "28": 10,
+            "29": 10
+          },
+          "Branches": []
+        },
+        "System.Void UtilitarioParaOsTests.Repositorios.UnidadeDeTrabalhoBuilder::.ctor()": {
+          "Lines": {
+            "12": 10,
+            "13": 10,
+            "14": 10,
+            "15": 10,
+            "16": 10,
+            "17": 10,
+            "19": 10
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 10
+            },
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 10
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Repositorios\\UsuarioReadOnlyRepositorioBuilder.cs": {
+      "UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder": {
+        "UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder::Instancia()": {
+          "Lines": {
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7
+          },
+          "Branches": []
+        },
+        "UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder::ExisteUsuarioComEmail(System.String)": {
+          "Lines": {
+            "27": 3,
+            "28": 3,
+            "29": 1,
+            "31": 3,
+            "32": 3
+          },
+          "Branches": [
+            {
+              "Line": 28,
+              "Offset": 30,
+              "EndOffset": 32,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 1
+            },
+            {
+              "Line": 28,
+              "Offset": 30,
+              "EndOffset": 147,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        },
+        "UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder::RecuperarPorEmailSenha(LivroDeReceitas.Domain.Entidades.Usuario)": {
+          "Lines": {
+            "35": 4,
+            "36": 4,
+            "38": 4,
+            "39": 4
+          },
+          "Branches": []
+        },
+        "LivroDeReceitas.Domain.Repositorios.IUsuarioReadOnlyRepositorio UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder::Construir()": {
+          "Lines": {
+            "42": 7,
+            "43": 7,
+            "44": 7
+          },
+          "Branches": []
+        },
+        "System.Void UtilitarioParaOsTests.Repositorios.UsuarioReadOnlyRepositorioBuilder::.ctor()": {
+          "Lines": {
+            "12": 7,
+            "13": 7,
+            "14": 7,
+            "15": 7,
+            "16": 7,
+            "17": 7,
+            "19": 7
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            },
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Repositorios\\UsuarioUpdateOnlyRepositorioBuilder.cs": {
+      "UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder": {
+        "UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder::Instancia()": {
+          "Lines": {
+            "21": 7,
+            "22": 7,
+            "23": 7,
+            "24": 7
+          },
+          "Branches": []
+        },
+        "UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder::RecuperarPorId(LivroDeReceitas.Domain.Entidades.Usuario)": {
+          "Lines": {
+            "27": 7,
+            "28": 7,
+            "30": 7,
+            "31": 7
+          },
+          "Branches": []
+        },
+        "LivroDeReceitas.Domain.Repositorios.IUsuarioUpdateOnlyRepositorio UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder::Construir()": {
+          "Lines": {
+            "33": 7,
+            "34": 7,
+            "35": 7
+          },
+          "Branches": []
+        },
+        "System.Void UtilitarioParaOsTests.Repositorios.UsuarioUpdateOnlyRepositorioBuilder::.ctor()": {
+          "Lines": {
+            "12": 7,
+            "13": 7,
+            "14": 7,
+            "15": 7,
+            "16": 7,
+            "17": 7,
+            "19": 7
+          },
+          "Branches": [
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 7
+            },
+            {
+              "Line": 14,
+              "Offset": 19,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 7
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Repositorios\\UsuarioWriteOnlyRepositorioBuilder.cs": {
+      "UtilitarioParaOsTests.Repositorios.UsuarioWriteOnlyRepositorioBuilder": {
+        "UtilitarioParaOsTests.Repositorios.UsuarioWriteOnlyRepositorioBuilder UtilitarioParaOsTests.Repositorios.UsuarioWriteOnlyRepositorioBuilder::Instancia()": {
+          "Lines": {
+            "20": 3,
+            "21": 3,
+            "22": 3,
+            "23": 3
+          },
+          "Branches": []
+        },
+        "LivroDeReceitas.Domain.Repositorios.IUsuarioWriteOnlyRepositorio UtilitarioParaOsTests.Repositorios.UsuarioWriteOnlyRepositorioBuilder::Construir()": {
+          "Lines": {
+            "26": 3,
+            "27": 3,
+            "28": 3
+          },
+          "Branches": []
+        },
+        "System.Void UtilitarioParaOsTests.Repositorios.UsuarioWriteOnlyRepositorioBuilder::.ctor()": {
+          "Lines": {
+            "11": 3,
+            "12": 3,
+            "13": 3,
+            "14": 3,
+            "15": 3,
+            "16": 3,
+            "18": 3
+          },
+          "Branches": [
+            {
+              "Line": 13,
+              "Offset": 19,
+              "EndOffset": 21,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 3
+            },
+            {
+              "Line": 13,
+              "Offset": 19,
+              "EndOffset": 34,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 3
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Mapper\\MapperBuilder.cs": {
+      "UtilitarioParaOsTests.Mapper.MapperBuilder": {
+        "AutoMapper.IMapper UtilitarioParaOsTests.Mapper.MapperBuilder::Instancia()": {
+          "Lines": {
+            "9": 3,
+            "10": 3,
+            "11": 3,
+            "12": 3,
+            "13": 6,
+            "15": 3,
+            "16": 3
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Entidades\\UsuarioBuilder.cs": {
+      "UtilitarioParaOsTests.Entidades.UsuarioBuilder": {
+        "System.ValueTuple`2<LivroDeReceitas.Domain.Entidades.Usuario,System.String> UtilitarioParaOsTests.Entidades.UsuarioBuilder::Construir()": {
+          "Lines": {
+            "11": 11,
+            "12": 11,
+            "14": 11,
+            "15": 11,
+            "16": 11,
+            "17": 11,
+            "18": 11,
+            "19": 11,
+            "20": 11,
+            "21": 11,
+            "22": 11,
+            "23": 11,
+            "24": 22,
+            "26": 11,
+            "27": 11
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\pedro\\OneDrive\\Área de Trabalho\\Estudos\\ProjetoC#\\LivroDeReceitas\\tests\\UtilitarioParaOsTests\\Criptografia\\EncriptadorDeSenhaBuilder.cs": {
+      "UtilitarioParaOsTests.Criptografia.EncriptadorDeSenhaBuilder": {
+        "LivroDeReceitas.Application.Servicos.Criptografia.EncriptadorDeSenha UtilitarioParaOsTests.Criptografia.EncriptadorDeSenhaBuilder::Instancia()": {
+          "Lines": {
+            "6": 25,
+            "7": 25,
+            "8": 25
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}
