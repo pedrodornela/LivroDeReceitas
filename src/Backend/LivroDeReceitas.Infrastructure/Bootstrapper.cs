@@ -23,7 +23,7 @@ public static class Bootstrapper
 
     private static void AddContexto(IServiceCollection services, IConfiguration configurationManager)
     {
-        bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
+        _ = bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
 
         if (!bancoDeDadosMemory) 
         {
@@ -49,7 +49,7 @@ public static class Bootstrapper
     }
     private static void AddFluentMigrator(IServiceCollection services, IConfiguration configurationManager)
     {
-        bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
+       _ = bool.TryParse(configurationManager.GetSection("Configuracoes:BancoDeDadosMemory").Value, out bool bancoDeDadosMemory);
 
         if (!bancoDeDadosMemory)
         {
