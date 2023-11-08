@@ -1,6 +1,6 @@
 ﻿namespace LivroDeReceitas.Comunicacao.Request;
 
-public class RequestRegistrarUsuarioJson
+public class RequisicaoRegistrarUsuarioJson
 {
     public string Nome { get; set; }
     public string Email { get; set; }

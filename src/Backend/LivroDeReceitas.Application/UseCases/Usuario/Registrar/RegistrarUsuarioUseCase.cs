@@ -35,7 +35,7 @@ public class RegistrarUsuarioUseCase : IRegistrarUsuarioUseCase
         _repositorio = repositorio;
     }
 
-    public async Task<RespostaUsuarioRegistradoJson> Executar(RequestRegistrarUsuarioJson requisicao)
+    public async Task<RespostaUsuarioRegistradoJson> Executar(RequisicaoRegistrarUsuarioJson requisicao)
     {
         await Validar(requisicao);
 
@@ -54,7 +54,7 @@ public class RegistrarUsuarioUseCase : IRegistrarUsuarioUseCase
         };
     }
 
-    private async Task Validar(RequestRegistrarUsuarioJson requisicao)
+    private async Task Validar(RequisicaoRegistrarUsuarioJson requisicao)
     {
         var validator = new RegistrarUsuarioValidator();
         var resultado = validator.Validate(requisicao);

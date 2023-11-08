@@ -1,3 +1,4 @@
+using HashidsNet;
 using LivroDeReceitas.Api.Filtros;
 using LivroDeReceitas.Api.Middleware;
 using LivroDeReceitas.Application;
@@ -29,9 +30,10 @@ builder.Services.AddApplication(builder.Configuration);
 
 builder.Services.AddMvc(options => options .Filters.Add(typeof(FiltroDasExceptions)));
 
-builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cpf =>
+builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
 {
-    cpf.AddProfile(new AutoMapperConfiguracao());
+
+    cfg.AddProfile(new AutoMapperConfiguracao(provider.GetService<IHashids>()));
 
 }).CreateMapper());
 
