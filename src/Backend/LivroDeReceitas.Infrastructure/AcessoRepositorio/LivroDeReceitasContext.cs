@@ -10,7 +10,8 @@ public class LivroDeReceitasContext : DbContext
         
     }
 
-    public DbSet<Usuario> Usuarios { get; set; }     
+    public DbSet<Usuario> Usuarios { get; set; }
+    public DbSet<Receita> Receitas { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
