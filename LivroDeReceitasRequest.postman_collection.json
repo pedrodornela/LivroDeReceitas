@@ -65,6 +65,11 @@
 						"key": "Accept",
 						"value": "text/plain",
 						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "pt",
+						"type": "text"
 					}
 				],
 				"body": {
@@ -141,11 +146,11 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Fazer Login na API\", function(){\r",
+							"pm.test(\"Fazer Login com Erro na API\", function(){\r",
 							"    pm.response.to.have.status(401);\r",
 							"    pm.response.to.be.withBody;\r",
 							"    pm.response.to.be.json;\r",
-							"    pm.response.to.have.jsonBody(\"mensagens\")\r",
+							"    pm.response.to.have.jsonBody(\"mensagens\");\r",
 							"})"
 						],
 						"type": "text/javascript"
@@ -282,6 +287,280 @@
 					],
 					"path": [
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Registrar Receita",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar se registrou a receita com sucesso\", function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.jsonBody(\"id\");\r",
+							"    pm.response.to.have.jsonBody(\"titulo\");\r",
+							"    pm.response.to.have.jsonBody(\"categoria\");\r",
+							"    pm.response.to.have.jsonBody(\"modoPreparo\");\r",
+							"    pm.response.to.have.jsonBody(\"ingredientes\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "text/plain",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "pt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 2,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/receitas",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"receitas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Dashborad",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Validar se recuperou dashboard com sucesso\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    \r",
+							"    let jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData.receitas).to.be.an(\"array\")\r",
+							"    pm.expect(jsonData.receitas[0]).to.have.keys(\"id\", \"titulo\", \"quantidadeIngredientes\")\r",
+							"\r",
+							"    pm.environment.set(\"ID_RECEITA\", jsonData.receitas[0].id);\r",
+							"\r",
+							"}) "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"tituloOuIngrediente\": \"\",\r\n  \"categoria\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/dashboard",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"dashboard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Recuperar Receita por Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Recuperar receita por Id com sucesso\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.jsonBody(\"id\");\r",
+							"    pm.response.to.have.jsonBody(\"titulo\");\r",
+							"    pm.response.to.have.jsonBody(\"categoria\");\r",
+							"    pm.response.to.have.jsonBody(\"modoPreparo\");\r",
+							"\r",
+							"    //Ingredientes\r",
+							"    let jsonData = pm.response.json()\r",
+							"    pm.expect(jsonData.ingredientes).to.be.an(\"array\")\r",
+							"    \r",
+							"\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/receitas/{{ID_RECEITA}}",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"receitas",
+						"{{ID_RECEITA}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Receita",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Atualizar receita por Id com sucesso\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 1,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URLBASE}}/receitas/{{ID_RECEITA}}",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"receitas",
+						"{{ID_RECEITA}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Receita",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Deletar receita por Id com sucesso\", function(){\r",
+							"    pm.response.to.have.status(204);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/receitas/{{ID_RECEITA}}",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"receitas",
+						"{{ID_RECEITA}}"
 					]
 				}
 			},

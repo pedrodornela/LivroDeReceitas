@@ -1,5 +1,6 @@
 using HashidsNet;
 using LivroDeReceitas.Api.Filtros;
+using LivroDeReceitas.Api.Filtros.Swagger;
 using LivroDeReceitas.Api.Middleware;
 using LivroDeReceitas.Application;
 using LivroDeReceitas.Application.Servicos.Automapper;
@@ -23,12 +24,38 @@ builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(option => {
+
+    option.OperationFilter<HashidsOperationFilter>();
+    option.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "Livro de Receitas API", Version = "1.0"});
+    option.AddSecurityDefinition("Bearer", new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+    {
+        Name = "Authorization",
+        Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+        Description = "JWT Autorization header utilizando o Brearer scheme. Example \" Authorization: Bearer {token}\" "
+    });
+    option.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+    {
+        {
+            new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+            {
+                Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                {
+                    Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] {}
+        }
+    });
+});
 
 builder.Services.AddInfrastructure(builder.Configuration);
 builder.Services.AddApplication(builder.Configuration);
 
-builder.Services.AddMvc(options => options .Filters.Add(typeof(FiltroDasExceptions)));
+builder.Services.AddMvc(options => options.Filters.Add(typeof(FiltroDasExceptions)));
 
 builder.Services.AddScoped(provider => new AutoMapper.MapperConfiguration(cfg =>
 {

@@ -24,7 +24,7 @@ public class RegistrarReceitaUseCase : IRegistrarReceitaUseCase
         _repositorio = repositorio;
     }
 
-    public async Task<RespostaReceitaJson> Executar(RequisicaoRegistrarReceitaJson requisicao)
+    public async Task<RespostaReceitaJson> Executar(RequisicaoReceitaJson requisicao)
     {
         Validar(requisicao);
 
@@ -41,7 +41,7 @@ public class RegistrarReceitaUseCase : IRegistrarReceitaUseCase
 
     }
 
-    private void Validar(RequisicaoRegistrarReceitaJson requisicao)
+    private void Validar(RequisicaoReceitaJson requisicao)
     {
         var validator = new RegistrarReceitasValidator();
         var resultado = validator.Validate(requisicao);

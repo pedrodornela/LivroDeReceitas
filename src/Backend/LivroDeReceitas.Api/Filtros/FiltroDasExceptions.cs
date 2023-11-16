@@ -13,13 +13,13 @@ public class FiltroDasExceptions : IExceptionFilter
 {
     public void OnException(ExceptionContext context)
     {
-        if(context.Exception is ErrosDeValidacaoException) 
+        if(context.Exception is LivroDeReceitasException) 
         {
             TratarLivroDeReceitasException(context);
         }
         else
         {
-            TratarLoginException(context);
+            LancarErroDesconhecido(context);
         }
 
     }
@@ -32,7 +32,7 @@ public class FiltroDasExceptions : IExceptionFilter
         }
         else if(context.Exception is LoginInvalidoException)
         {
-            LancarErroDesconhecido(context);
+            TratarLoginException(context);
         }
 
     }

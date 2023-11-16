@@ -22,9 +22,9 @@ public class AutoMapperConfiguracao : Profile
         CreateMap<Comunicacao.Request.RequisicaoRegistrarUsuarioJson, Domain.Entidades.Usuario>()
             .ForMember(destino => destino.Senha, config => config.Ignore());
 
-        CreateMap<Comunicacao.Request.RequisicaoRegistrarReceitaJson, Domain.Entidades.Receita>();
+        CreateMap<Comunicacao.Request.RequisicaoReceitaJson, Domain.Entidades.Receita>();
 
-        CreateMap<Comunicacao.Request.RequisicaoRegistrarIngredienteJson, Domain.Entidades.Ingrediente>();
+        CreateMap<Comunicacao.Request.RequisicaoIngredienteJson, Domain.Entidades.Ingrediente>();
     }
 
     private void EntidadeParaResposta()
@@ -35,6 +35,10 @@ public class AutoMapperConfiguracao : Profile
 
         CreateMap<Domain.Entidades.Ingrediente, Comunicacao.Response.RespostaIngredienteJson>()
             .ForMember(destino => destino.Id, config => config.MapFrom(origem => _hashids.EncodeLong(origem.Id)));
+
+        CreateMap<Domain.Entidades.Receita, Comunicacao.Response.RespostaReceitasDashboardJson>()
+            .ForMember(destino => destino.Id, config => config.MapFrom(origem => _hashids.EncodeLong(origem.Id)))
+            .ForMember(destino => destino.QuantidadeIngredientes, config => config.MapFrom(origem => origem.Ingredientes.Count));
     }
 
 

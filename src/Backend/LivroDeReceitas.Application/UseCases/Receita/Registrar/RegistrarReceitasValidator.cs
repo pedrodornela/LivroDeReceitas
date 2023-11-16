@@ -3,30 +3,11 @@ using LivroDeReceitas.Comunicacao.Request;
 using LivroDeReceitas.Domain.Entidades;
 
 namespace LivroDeReceitas.Application.UseCases.Receita.Registrar;
-public class RegistrarReceitasValidator : AbstractValidator<RequisicaoRegistrarReceitaJson>
+public class RegistrarReceitasValidator : AbstractValidator<RequisicaoReceitaJson>
 {
     public RegistrarReceitasValidator()
     {
-        RuleFor(x => x.Titulo).NotEmpty();
-        RuleFor(x => x.Categoria).IsInEnum();
-        RuleFor(x => x.ModoPreparo).NotEmpty();
-        RuleFor(x => x.Ingredientes).NotEmpty();
-        RuleForEach(x => x.Ingredientes).ChildRules(ingrediente =>
-        {
-            ingrediente.RuleFor(x => x.Produto).NotEmpty();
-            ingrediente.RuleFor(x => x.Quantidade).NotEmpty();
-        });
-
-        RuleFor(x => x.Ingredientes).Custom((ingredientes, contexto) =>
-        {
-            var produtosDistintos = ingredientes.Select(c => c.Produto).Distinct();
-
-            if (produtosDistintos.Count() != ingredientes.Count())
-            {
-                contexto.AddFailure(new FluentValidation.Results.ValidationFailure("Ingredientes", ""));
-            }
-
-        });
+        RuleFor(x => x).SetValidator(new ReceitaValidator());
 
     }
 }
