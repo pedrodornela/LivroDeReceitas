@@ -3,7 +3,8 @@
 		"_postman_id": "40294815-0f92-4913-9580-5ecc23b01112",
 		"name": "LivroDeReceitasRequest",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "27101740"
+		"_exporter_id": "27101740",
+		"_collection_link": "https://grey-astronaut-880341.postman.co/workspace/grey-astronaut-880341-Workspace~042670f6-a7cb-4914-803e-c9449f7b36c8/collection/27101740-40294815-0f92-4913-9580-5ecc23b01112?action=share&source=collection_link&creator=27101740"
 	},
 	"item": [
 		{
@@ -134,6 +135,51 @@
 					],
 					"path": [
 						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "RecuperarPerfilUsuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Fazer Recuperar Perfil do Usuário\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.be.withBody;\r",
+							"    pm.response.to.be.json;\r",
+							"    pm.response.to.have.jsonBody(\"nome\");\r",
+							"    pm.response.to.have.jsonBody(\"email\");\r",
+							"    pm.response.to.have.jsonBody(\"telefone\");\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URLBASE}}/usuario",
+					"host": [
+						"{{URLBASE}}"
+					],
+					"path": [
+						"usuario"
 					]
 				}
 			},
@@ -312,6 +358,17 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var tempoPreparo = _.random(1,1000)\r",
+							"\r",
+							"postman.setGlobalVariable('TEMPOPREPARO', tempoPreparo);"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -345,7 +402,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 2,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
+					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 2,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"tempoPreparo\":{{TEMPOPREPARO}},\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -378,7 +435,7 @@
 							"    \r",
 							"    let jsonData = pm.response.json()\r",
 							"    pm.expect(jsonData.receitas).to.be.an(\"array\")\r",
-							"    pm.expect(jsonData.receitas[0]).to.have.keys(\"id\", \"titulo\", \"quantidadeIngredientes\")\r",
+							"    pm.expect(jsonData.receitas[0]).to.have.keys(\"id\", \"titulo\", \"quantidadeIngredientes\", \"tempoPreparo\")\r",
 							"\r",
 							"    pm.environment.set(\"ID_RECEITA\", jsonData.receitas[0].id);\r",
 							"\r",
@@ -488,6 +545,17 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"var tempoPreparo = _.random(1,1000)\r",
+							"\r",
+							"postman.setGlobalVariable('TEMPOPREPARO', tempoPreparo);"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
@@ -505,7 +573,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 1,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
+					"raw": "{\r\n  \"titulo\": \"{{$randomNoun}}\",\r\n  \"categoria\": 1,\r\n  \"modoPreparo\": \"{{$randomLoremParagraph}}\",\r\n  \"tempoPreparo\":{{TEMPOPREPARO}},\r\n  \"ingredientes\": [\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    },\r\n    {\r\n      \"produto\": \"{{$randomProduct}}\",\r\n      \"quantidade\": \"{{$randomVerb}}\"\r\n    }\r\n  ]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

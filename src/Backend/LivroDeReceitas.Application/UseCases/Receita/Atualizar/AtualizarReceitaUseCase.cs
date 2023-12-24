@@ -45,7 +45,7 @@ public class AtualizarReceitaUseCase : IAtualizarReceitaUseCase
             throw new ErrosDeValidacaoException(new List<string> { ResourceMensagensDeErro.RECEITA_NAO_ENCONTRADA });
         }
 
-        var validator = new AtualizarReceitaValidator();
+        /*var validator = new AtualizarReceitaValidator();
         var resultado = validator.Validate(requisicao);
 
         if (!resultado.IsValid)
@@ -53,7 +53,7 @@ public class AtualizarReceitaUseCase : IAtualizarReceitaUseCase
             var mensagensDeErro = resultado.Errors.Select(c => c.ErrorMessage).ToList();
             throw new ErrosDeValidacaoException(mensagensDeErro);
 
-        }
+        }*/
 
     }
 

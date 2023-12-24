@@ -42,8 +42,8 @@ public class ReceitasController : LivroDeReceitasController
 
     [HttpPut]
     [Route("{id:hashids}")]
-    [ProducesResponseType(typeof(RespostaReceitaJson), StatusCodes.Status204NoContent)]
-    public async Task<IActionResult> AtualizarPorId(
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> Atualizar(
         [FromServices] IAtualizarReceitaUseCase useCase,
         [FromBody] RequisicaoReceitaJson requisicao,
         [FromRoute][ModelBinder(typeof(HashidsModelBinder))] long id)

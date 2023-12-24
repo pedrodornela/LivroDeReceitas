@@ -9,10 +9,10 @@ using LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio;
 namespace LivroDeReceitas.Application.UseCases.Receita.Registrar;
 public class RegistrarReceitaUseCase : IRegistrarReceitaUseCase
 {
-    private IMapper _mapper;
-    private IUnidadeDeTrabalho _unidadeDeTrabalho;
-    private IUsuarioLogado _usuarioLogado;
-    private IReceitaWriteOnlyRepositorio _repositorio;
+    private readonly IMapper _mapper;
+    private readonly IUnidadeDeTrabalho _unidadeDeTrabalho;
+    private readonly IUsuarioLogado _usuarioLogado;
+    private readonly IReceitaWriteOnlyRepositorio _repositorio;
 
 
     public RegistrarReceitaUseCase(IMapper mapper, IUnidadeDeTrabalho unidadeDeTrabalho, IUsuarioLogado usuarioLogado,
@@ -41,7 +41,7 @@ public class RegistrarReceitaUseCase : IRegistrarReceitaUseCase
 
     }
 
-    private void Validar(RequisicaoReceitaJson requisicao)
+    private static void Validar(RequisicaoReceitaJson requisicao)
     {
         var validator = new RegistrarReceitasValidator();
         var resultado = validator.Validate(requisicao);

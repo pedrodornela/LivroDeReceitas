@@ -1,5 +1,7 @@
-﻿namespace LivroDeReceitas.Application.UseCases.Conexao.GerarQRCode;
+﻿using System.Drawing;
+
+namespace LivroDeReceitas.Application.UseCases.Conexao.GerarQRCode;
 public interface IGerarQRCodeUseCase
 {
-    Task<(string qrCode, string idUsuario)> Executar();
+    Task<(byte[] qrCode, string idUsuario)> Executar();
 }

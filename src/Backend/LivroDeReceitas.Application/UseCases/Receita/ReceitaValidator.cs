@@ -22,9 +22,9 @@ public class ReceitaValidator : AbstractValidator<RequisicaoReceitaJson>
         {
             var produtosDistintos = ingredientes.Select(c => c.Produto.RemoverAcentos().ToLower()).Distinct();
 
-            if (produtosDistintos.Count() != ingredientes.Count())
+            if (produtosDistintos.Count() != ingredientes.Count)
             {
-                contexto.AddFailure(new FluentValidation.Results.ValidationFailure("Ingredientes", ""));
+                contexto.AddFailure(new FluentValidation.Results.ValidationFailure("Ingredientes", "Ingredientes da Receita Repetidos"));
             }
 
         });

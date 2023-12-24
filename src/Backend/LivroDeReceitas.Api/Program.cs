@@ -12,7 +12,9 @@ using LivroDeReceitas.Infrastructure.AcessoRepositorio;
 using LivroDeReceitas.Infrastructure.Migrations;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -50,7 +52,7 @@ builder.Services.AddSwaggerGen(option => {
                     Id = "Bearer"
                 }
             },
-            new string[] {}
+            System.Array.Empty<string>()
         }
     });
 });
@@ -77,7 +79,24 @@ builder.Services.AddScoped<UsuarioAutenticadoAttribute>();
 
 builder.Services.AddSignalR();
 
+builder.Services.AddHealthChecks().AddDbContextCheck<LivroDeReceitasContext>();
+
+
 var app = builder.Build();
+
+//localhost:7248/health
+app.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+{
+    AllowCachingResponses = false,
+    ResultStatusCodes =
+    {
+        [HealthStatus.Healthy] = StatusCodes.Status200OK,
+        [HealthStatus.Unhealthy] = StatusCodes.Status503ServiceUnavailable,
+
+    }
+
+});
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
