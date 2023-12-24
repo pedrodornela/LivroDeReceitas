@@ -11,6 +11,7 @@ public class ReceitaValidator : AbstractValidator<RequisicaoReceitaJson>
         RuleFor(x => x.Categoria).IsInEnum();
         RuleFor(x => x.ModoPreparo).NotEmpty();
         RuleFor(x => x.Ingredientes).NotEmpty();
+        RuleFor(x => x.TempoPreparo).InclusiveBetween(1, 1000);
         RuleForEach(x => x.Ingredientes).ChildRules(ingrediente =>
         {
             ingrediente.RuleFor(x => x.Produto).NotEmpty();

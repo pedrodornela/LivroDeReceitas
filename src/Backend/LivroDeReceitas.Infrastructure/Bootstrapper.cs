@@ -8,6 +8,8 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using LivroDeReceitas.Domain.Repositorios.Receita;
+using LivroDeReceitas.Domain.Repositorios.Codigo;
+using LivroDeReceitas.Domain.Repositorios.Conexao;
 
 namespace LivroDeReceitas.Infrastructure;
 
@@ -49,7 +51,11 @@ public static class Bootstrapper
             .AddScoped<IUsuarioUpdateOnlyRepositorio, UsuarioRepositorio>()
             .AddScoped<IReceitaWriteOnlyRepositorio, ReceitaRepositorio>()
             .AddScoped<IReceitaReadOnlyRepositorio, ReceitaRepositorio>()
-            .AddScoped<IReceitaUpdateOnlyRepositorio, ReceitaRepositorio>();
+            .AddScoped<IReceitaUpdateOnlyRepositorio, ReceitaRepositorio>()
+            .AddScoped<ICodigoWriteOnlyRepositorio, CodigoRepositorio>()
+            .AddScoped<ICodigoReadOnlyRepositorio, CodigoRepositorio>()
+            .AddScoped<IConexaoReadOnlyRepositorio, ConexaoRepositorio>()
+            .AddScoped<IConexaoWriteOnlyRepositorio, ConexaoRepositorio>();
     }
     private static void AddFluentMigrator(IServiceCollection services, IConfiguration configurationManager)
     {

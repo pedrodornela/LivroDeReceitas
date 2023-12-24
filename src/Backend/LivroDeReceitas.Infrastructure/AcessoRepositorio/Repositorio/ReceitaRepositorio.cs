@@ -5,8 +5,7 @@ using Microsoft.EntityFrameworkCore;
 namespace LivroDeReceitas.Infrastructure.AcessoRepositorio.Repositorio;
 public class ReceitaRepositorio : IReceitaWriteOnlyRepositorio, IReceitaReadOnlyRepositorio, IReceitaUpdateOnlyRepositorio
 {
-    private readonly LivroDeReceitasContext _context
-;
+    private readonly LivroDeReceitasContext _context;
     public ReceitaRepositorio(LivroDeReceitasContext context)
     {
         _context = context;
@@ -33,6 +32,13 @@ public class ReceitaRepositorio : IReceitaWriteOnlyRepositorio, IReceitaReadOnly
             .Where(r => r.UsuarioId == usuarioId).ToListAsync();
     }
 
+    public async Task<IList<Receita>> RecuperarTodasDosUsuarios(List<long> usuarioIds)
+    {
+        return await _context.Receitas.AsNoTracking()
+            .Include(r => r.Ingredientes)
+            .Where(r => usuarioIds.Contains(r.UsuarioId)).ToListAsync();
+    }
+
     public async Task Registrar(Receita receita)
     {
         await _context.Receitas.AddAsync(receita);
@@ -48,5 +54,10 @@ public class ReceitaRepositorio : IReceitaWriteOnlyRepositorio, IReceitaReadOnly
         var receita = await _context.Receitas.FirstOrDefaultAsync(r => r.Id == receitaId);
 
         _context.Receitas.Remove(receita);
+    }
+
+    public async Task<int> QuantidadeDeReceitas(long usuarioId)
+    {
+        return await _context.Receitas.CountAsync(r => r.UsuarioId == usuarioId);
     }
 }
