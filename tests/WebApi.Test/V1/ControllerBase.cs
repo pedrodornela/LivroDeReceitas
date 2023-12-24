@@ -37,7 +37,7 @@ public class ControllerBase : IClassFixture<LivroDeReceitasWebApplicationFactory
 
     protected async  Task<string> Login(string email, string senha)
     {
-        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson
+        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequisicaoRegistrarUsuarioJson
         {
             Email = email,
             Senha = senha

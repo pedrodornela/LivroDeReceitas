@@ -12,7 +12,7 @@ public class UsuarioLogadoBuilder
 
     private UsuarioLogadoBuilder()
     {
-        if (_repositorio == null)
+        if (_repositorio is null)
         {
             _repositorio = new Mock<IUsuarioLogado>();
         }

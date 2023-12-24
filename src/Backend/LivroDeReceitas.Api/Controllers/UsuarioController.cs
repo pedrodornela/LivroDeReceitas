@@ -1,5 +1,6 @@
-using LivroDeReceitas.Api.Filtros;
+using LivroDeReceitas.Api.Filtros.UsuarioLogado;
 using LivroDeReceitas.Application.UseCases.Usuario.AlterarSenha;
+using LivroDeReceitas.Application.UseCases.Usuario.RecuperarPerfil;
 using LivroDeReceitas.Application.UseCases.Usuario.Registrar;
 using LivroDeReceitas.Comunicacao.Request;
 using LivroDeReceitas.Comunicacao.Response;
@@ -20,7 +21,7 @@ namespace LivroDeReceitas.Api.Controllers
         [ProducesResponseType(typeof(RespostaUsuarioRegistradoJson), StatusCodes.Status201Created)]
         public async Task<IActionResult> RegistrarUsuario(
             [FromServices] IRegistrarUsuarioUseCase useCase, 
-            [FromBody] RequestRegistrarUsuarioJson request)
+            [FromBody] RequisicaoRegistrarUsuarioJson request)
         {
             var resultado = await useCase.Executar(request);
 
@@ -38,6 +39,18 @@ namespace LivroDeReceitas.Api.Controllers
             await useCase.Executar(request);
 
             return NoContent();
+        }
+
+
+        [HttpGet]
+        [ProducesResponseType(typeof(RespostaPerfilUsuarioJson), StatusCodes.Status200OK)]
+        [ServiceFilter(typeof(UsuarioAutenticadoAttribute))]
+        public async Task<IActionResult> RecuperarPerfil(
+            [FromServices] IRecuperarPerfilUseCase useCase)
+        {
+            var resultado = await useCase.Executar();
+
+            return Ok(resultado);
         }
 
 

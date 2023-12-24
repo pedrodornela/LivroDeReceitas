@@ -22,7 +22,7 @@ public class LoginTest : ControllerBase
     [Fact]
     public async Task Validar_Sucesso()
     {
-         var requisicao = new LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson
+         var requisicao = new LivroDeReceitas.Comunicacao.Request.RequisicaoRegistrarUsuarioJson
         {
             Email = _usuario.Email,
             Senha = _senha
@@ -43,7 +43,7 @@ public class LoginTest : ControllerBase
     [Fact]
     public async Task Validar_Erro_Email_Invalido()
     {
-        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson
+        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequisicaoRegistrarUsuarioJson
         {
             Email = "email@invalido.com",
             Senha = _senha
@@ -65,7 +65,7 @@ public class LoginTest : ControllerBase
     [Fact]
     public async Task Validar_Erro_Senha_Invalido()
     {
-        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson
+        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequisicaoRegistrarUsuarioJson
         {
             Email = _usuario.Email,
             Senha = "senhaInvalida"
@@ -86,7 +86,7 @@ public class LoginTest : ControllerBase
     [Fact]
     public async Task Validar_Erro_Email_Senha_Invalido()
     {
-        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequestRegistrarUsuarioJson
+        var requisicao = new LivroDeReceitas.Comunicacao.Request.RequisicaoRegistrarUsuarioJson
         {
             Email = "email@invalido.com",
             Senha = "senhaInvalida"

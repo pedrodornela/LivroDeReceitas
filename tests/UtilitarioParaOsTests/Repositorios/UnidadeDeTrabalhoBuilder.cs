@@ -11,7 +11,7 @@ public class UnidadeDeTrabalhoBuilder
 
     private UnidadeDeTrabalhoBuilder()
     {
-        if (_repositorio == null)
+        if (_repositorio is null)
         {
             _repositorio = new Mock<IUnidadeDeTrabalho>();
         }

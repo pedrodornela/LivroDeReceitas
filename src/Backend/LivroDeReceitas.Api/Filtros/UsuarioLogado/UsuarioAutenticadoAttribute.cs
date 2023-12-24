@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.IdentityModel.Tokens;
 using System.Threading.Tasks;
 
-namespace LivroDeReceitas.Api.Filtros;
+namespace LivroDeReceitas.Api.Filtros.UsuarioLogado;
 
 public class UsuarioAutenticadoAttribute : AuthorizeAttribute, IAsyncAuthorizationFilter
 {
@@ -20,7 +20,7 @@ public class UsuarioAutenticadoAttribute : AuthorizeAttribute, IAsyncAuthorizati
     {
         _tokenController = tokenController;
         _repositorio = repositorio;
-            
+
     }
 
     public async Task OnAuthorizationAsync(AuthorizationFilterContext context)
@@ -43,11 +43,11 @@ public class UsuarioAutenticadoAttribute : AuthorizeAttribute, IAsyncAuthorizati
 
             TokenExpirado(context);
         }
-        catch 
+        catch
         {
             UsuarioSemPermissao(context);
         }
-        
+
 
     }
 
@@ -55,7 +55,7 @@ public class UsuarioAutenticadoAttribute : AuthorizeAttribute, IAsyncAuthorizati
     {
         var authorization = context.HttpContext.Request.Headers["Authorization"].ToString();
 
-        if(string.IsNullOrWhiteSpace(authorization))
+        if (string.IsNullOrWhiteSpace(authorization))
         {
             throw new LivroDeReceitasException(string.Empty);
         }

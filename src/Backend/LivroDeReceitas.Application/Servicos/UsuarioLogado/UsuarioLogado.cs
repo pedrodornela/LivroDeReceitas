@@ -28,7 +28,6 @@ public class UsuarioLogado : IUsuarioLogado
         var usuario = await _repositorio.RecuperarPorEmail(emailUsuario);
 
         return usuario;
-
-        
     }
+
 }

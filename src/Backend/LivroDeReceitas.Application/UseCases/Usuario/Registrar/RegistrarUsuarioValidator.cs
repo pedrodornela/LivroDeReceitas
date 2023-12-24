@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 
 namespace LivroDeReceitas.Application.UseCases.Usuario.Registrar;
 
-public class RegistrarUsuarioValidator : AbstractValidator<RequestRegistrarUsuarioJson>
+public class RegistrarUsuarioValidator : AbstractValidator<RequisicaoRegistrarUsuarioJson>
 {
     public RegistrarUsuarioValidator()
     {
